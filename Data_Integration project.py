@@ -1,13 +1,7 @@
-#Makung the Spark DataFrame recognize my CSV file.
-fixtures = spark.read.option("header", True).csv("/Volumes/workspace/my_schema/my_volume/fixtures.csv")
-
-#This is to see the first 5 rows of the dataframe, so i can analyze it.
-fixtures.show(5)
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
-#Now I load my dataset from my unity catalog volume into the Spark DataFrame
+#I load my dataset from my unity catalog volume into the Spark DataFrame
 fixtures = spark.read.option("header", True).csv("/Volumes/workspace/my_schema/my_volume/fixtures.csv")
 
 #Seeing the first 5 rows to check the data
